@@ -249,7 +249,7 @@
       <div class="container">
         <div class="section-header">
           <h2>Contact Us</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <p>We'd like to hear from you.</p>
         </div>
 
         <div class="row contact-info">
@@ -274,7 +274,7 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:info@example.com">info@monsterjam.com</a></p>
             </div>
           </div>
 
@@ -329,7 +329,9 @@
 					     <div class="form-group">
 						    <img class="img img-responsive" src="{{asset('img/mlogo.png')}}"/><br>
 					        <span><strong>Monster Energy</strong> will receive:</span><br>
-                            <span>your public profile and email address <i class="fa fa-info-circle"></i></span>		
+                            <span>your public profile and email address <i class="fa fa-info-circle"></i></span><br><br><br>
+							<span style="color:#bcbcbc;"><i class="fa fa-lock"></i> This doesn't let the app post to Facebook.</span><br>
+									
                          </div>		
                          <div class="form-group">					
 							<center><a class="btn" id="burger-btn" style="background:#0c2e8a;color:#fff;font-family:'Raleway', sans-serif;font-size: 15px;font-weight: bold;letter-spacing: 1px;display: inline-block;padding: 10px 32px;border-radius: 2px;transition: 0.5s;margin: 10px;color: #fff;" href="#">Continue</a></center> 
