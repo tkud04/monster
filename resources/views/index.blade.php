@@ -101,7 +101,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 about-img">
-            <img src="{{asset('img/monster-4.jpg')}}" alt="">
+		  <?php $url = "asset('img/monster-4.jpg')"; ?>
+            <img src="{{$u}}" alt="">
           </div>
 
           <div class="col-lg-6 content">
