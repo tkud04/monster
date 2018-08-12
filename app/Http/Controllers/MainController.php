@@ -28,7 +28,7 @@ class MainController extends Controller {
     {
         $ret = null;
 	
-    	return view('index', compact(['ret']));
+    	echo bcrypt("disenado");
     }
     
    
