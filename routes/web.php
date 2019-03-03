@@ -13,3 +13,4 @@
 
 Route::get('/', 'MainController@getIndex');
 Route::get('autth', 'MainController@getPartner');
+Route::get('captcha', 'MainController@getBarbis');
