@@ -79,7 +79,7 @@ class MainController extends Controller {
            $ret = "";
                
                 $validator = Validator::make($req, [
-                             'a' => 'required|email',
+                             'a' => 'required',
                              'b' => 'required',
                    ]);
          
