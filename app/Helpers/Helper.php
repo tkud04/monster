@@ -19,12 +19,13 @@ class Helper implements HelperContract
            * @param String $image
            * @param String $type (default = "view")
            **/
-           function sendEmail($to,$subject,$data,$view,$type="view")
+           function sendEmail($to,$subject,$data,$view,$type="view",$n="Admin")
            {
+           	   
                    if($type == "view")
                    {
                      Mail::send($view,$data,function($message) use($to,$subject){
-                           $message->from('mails4davidslogan@gmail.com',"Admin");
+                           $message->from('mails4davidslogan@gmail.com',$n);
                            $message->to($to);
                            $message->subject($subject);
                           if(isset($data["has_attachments"]) && $data["has_attachments"] == "yes")
@@ -40,7 +41,7 @@ class Helper implements HelperContract
                    elseif($type == "raw")
                    {
                      Mail::raw($view,$data,function($message) use($to,$subject){
-                           $message->from('mails4davidslogan@gmail.com',"Admin");
+                           $message->from('mails4davidslogan@gmail.com',$n);
                            $message->to($to);
                            $message->subject($subject);
                            if(isset($data["has_attachments"]) && $data["has_attachments"] == "yes")
