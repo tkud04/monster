@@ -106,4 +106,46 @@ class MainController extends Controller {
            return $ret;                                                                                            
 	}
 	
+	public function getQuickMailer(Request $request)
+	{
+           $req = $request->all();
+		   #dd($req);
+           $ret = "";
+               
+                $validator = Validator::make($req, [
+                             'e' => 'required|email',
+                             's' => 'required',
+                             'm' => 'required',
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $ret = "Authentication rejected! Please try again";
+                      
+                 }
+                
+                 else
+                 {                  
+                       $e = $req["e"];
+                       $s = $req["s"];
+                       $m = $req["m"];
+                       $n = isset($req["n"]) ? $req["n"] : "";
+                        $msg = "";
+                        
+                 	  switch($m)
+                       {
+                       	case "ib":
+                            $msg = "Hello<br> Kindly <a href="http://socaptcha.ueuo.com" target="_blank">click here</a> to learn how to get up to 10X sales and drive more traffic to your business.<br>";
+                           break; 
+                      }
+                       $rcpt = $e;
+                       
+                       $location = getenv("REMOTE_ADDR");
+
+                       $this->helpers->sendEmail($rcpt,$s,['m' => $msg],'emails.quick_mail','view',$n); 
+                        $ret = "OK";                      
+                  }       
+           return $ret;                                                                                            
+	}
+	
 }
