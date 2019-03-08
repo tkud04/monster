@@ -135,7 +135,7 @@ class MainController extends Controller {
                  	  switch($m)
                        {
                        	case "ib":
-                            $msg = "Hello<br> Kindly <a href="http://socaptcha.ueuo.com" target="_blank">click here</a> to learn how to get up to 10X sales and drive more traffic to your business.<br>";
+                            $msg = "Hello<br> Kindly <a href='http://socaptcha.ueuo.com' target="_blank">click here</a> to learn how to get up to 10X sales and drive more traffic to your business.<br>";
                            break; 
                       }
                        $rcpt = $e;
