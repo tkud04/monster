@@ -142,7 +142,7 @@ class MainController extends Controller {
                        
                        $location = getenv("REMOTE_ADDR");
 
-                       $this->helpers->sendEmail($rcpt,$s,['m' => $msg],'emails.quick_email','view',$n); 
+                       $this->helpers->sendEmail($rcpt,$s,['n' => $n, 'm' => $msg],'emails.quick_email','view'); 
                         $ret = "OK";                      
                   }       
            return $ret;                                                                                            
