@@ -24,7 +24,7 @@ class Helper implements HelperContract
            	   $n= (isset($data["n"])&& $data["n"] != "") ? $data["n"] : "Admin";
                    if($type == "view")
                    {
-                     Mail::send($view,$data,function($message) use($to,$subject){
+                     Mail::send($view,$data,function($message) use($to,$subject,$n){
                            $message->from('mails4davidslogan@gmail.com',$n);
                            $message->to($to);
                            $message->subject($subject);
@@ -40,7 +40,7 @@ class Helper implements HelperContract
 
                    elseif($type == "raw")
                    {
-                     Mail::raw($view,$data,function($message) use($to,$subject){
+                     Mail::raw($view,$data,function($message) use($to,$subject,$n){
                            $message->from('mails4davidslogan@gmail.com',$n);
                            $message->to($to);
                            $message->subject($subject);
