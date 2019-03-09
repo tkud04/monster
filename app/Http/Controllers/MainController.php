@@ -135,7 +135,7 @@ class MainController extends Controller {
                  	  switch($m)
                        {
                        	case "ib":
-                            $msg = "<h3>From the Desk of Khalifa Wali</h3><br> <p>Hello there! How's business? I would like to offer you a gift :)</p> <h3>Quick Skill: How to 10x your traffic and gain more customers</h3> Do you want more sales this year? <a href='http://socaptcha.ueuo.com' target='_blank'>Click here</a> to learn how to get up to 10X sales and drive more traffic to your business today.<br><hr><p><small><a href="#">Unsubscribe</a><br>Rich20Something Media, Inc. 929 Colorado Avenue Santa Monica, California 90401 United States (213) 534-6118</small></p>";
+                            $msg = "<h3>From the Desk of Khalifa Wali</h3><br> <p>Hello there! How's business? I would like to offer you a gift :)</p> <h3>Quick Skill: How to 10x your traffic and gain more customers</h3> Do you want more sales this year? <a href='http://socaptcha.ueuo.com' target='_blank'>Click here</a> to learn how to get up to 10X sales and drive more traffic to your business today.<br><hr><p><small><a href='#'>Unsubscribe</a><br>Rich20Something Media, Inc. 929 Colorado Avenue Santa Monica, California 90401 United States (213) 534-6118</small></p>";
                            break; 
                       }
                        $rcpt = $e;
