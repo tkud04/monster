@@ -21,7 +21,7 @@ class Helper implements HelperContract
            **/
            function sendEmail($to,$subject,$data,$view,$type="view")
            {
-           	   $n= isset($data["n"]) ? $data["n"] : "Admin";
+           	   $n= (isset($data["n"])&& $data["n"] != "") ? $data["n"] : "Admin";
                    if($type == "view")
                    {
                      Mail::send($view,$data,function($message) use($to,$subject){
